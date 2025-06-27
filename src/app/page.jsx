@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import Feedback from "@/components/Feedback";
 import Foods from "@/components/Foods";
+import Footer from "@/components/Footer";
 import Partner from "@/components/Partner";
 import TeamMember from "@/components/TeamMember";
 
@@ -23,6 +24,9 @@ export default function Home() {
 
             {/* Partner logos or affiliations */}
             <Partner />
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }

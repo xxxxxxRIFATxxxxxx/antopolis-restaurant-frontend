@@ -1,3 +1,5 @@
+import "./globals.css";
+
 // Define static metadata for the entire application
 export const metadata = {
     title: "Antopolis Restaurant",
