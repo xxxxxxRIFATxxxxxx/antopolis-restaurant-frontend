@@ -53,7 +53,7 @@ export default function Banner() {
         const fetchDishes = async () => {
             try {
                 const response = await axios.get(
-                    `${process.env.API_URL}/foods`
+                    `${process.env.NEXT_PUBLIC_API_URL}/foods`
                 );
                 setAllDishes(response.data);
             } catch (error) {

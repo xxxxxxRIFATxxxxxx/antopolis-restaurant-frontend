@@ -36,8 +36,8 @@ export default function Foods() {
             try {
                 setIsLoading(true);
                 const [foodsRes, categoriesRes] = await Promise.all([
-                    axios.get(`${process.env.API_URL}/foods`),
-                    axios.get(`${process.env.API_URL}/categories`),
+                    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/foods`),
+                    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/categories`),
                 ]);
                 setFoodList(foodsRes.data);
                 setCategoryList(categoriesRes.data);
@@ -82,7 +82,10 @@ export default function Foods() {
         }
 
         try {
-            await axios.post(`${process.env.API_URL}/foods`, formData);
+            await axios.post(
+                `${process.env.NEXT_PUBLIC_API_URL}/foods`,
+                formData
+            );
             toast.success("Food added successfully");
             setShowFoodForm(false);
             setNewFoodData({
@@ -92,7 +95,7 @@ export default function Foods() {
                 imageFile: null,
             });
             const updatedFoods = await axios.get(
-                `${process.env.API_URL}/foods`
+                `${process.env.NEXT_PUBLIC_API_URL}/foods`
             );
             setFoodList(updatedFoods.data);
         } catch {
@@ -108,14 +111,14 @@ export default function Foods() {
         setIsSubmittingCategory(true);
 
         try {
-            await axios.post(`${process.env.API_URL}/categories`, {
+            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/categories`, {
                 name: newCategoryName,
             });
             toast.success("Category added successfully");
             setShowCategoryForm(false);
             setNewCategoryName("");
             const updatedCategories = await axios.get(
-                `${process.env.API_URL}/categories`
+                `${process.env.NEXT_PUBLIC_API_URL}/categories`
             );
             setCategoryList(updatedCategories.data);
         } catch {
