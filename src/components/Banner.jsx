@@ -150,9 +150,7 @@ export default function Banner() {
             <div className="absolute top-0 left-0 w-full h-full flex flex-col md:flex-row justify-between items-center px-6 md:px-10 z-10 pt-28 md:pt-0">
                 {/* Text section and thumbnails */}
                 <div className="text-white w-full md:w-1/2">
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                        BREAKFAST
-                    </h1>
+                    <h1 className="text-5xl md:text-7xl mb-6">BREAKFAST</h1>
                     <p className="text-base md:text-lg font-medium text-white/90 leading-relaxed mb-10 w-[95%] md:w-4/5">
                         Breakfast, often referred to as the &apos;most important
                         meal of the day&apos;, provides essential nutrients to
